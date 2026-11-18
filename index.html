@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151914">
+  <meta name="description" content="Pryorities — the private cocktail menu of the Pryor home bar in Austin, Texas. Some things are more important than others.">
+  <meta property="og:title" content="Pryorities — The Pryor Home Bar">
+  <meta property="og:description" content="Some things are more important than others. Pull up a chair. Find your cocktail.">
+  <meta property="og:type" content="website">
+  <title>Pryorities | The Pryor Home Bar</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/old-fashioned-hero.webp" as="image">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#menu">Skip to the cocktails</a>
+
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#top" aria-label="Pryorities, back to the top">
+      <span class="brand-mark" aria-hidden="true">P<span>.</span></span>
+      <span class="brand-copy"><strong>PRYORITIES</strong><small>THE PRYOR HOME BAR</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#featured">The favorites</a>
+      <a href="#menu">The collection</a>
+      <a href="#setting">The setting</a>
+    </nav>
+    <button class="header-cta" id="headerSurprise" type="button">Surprise me <span aria-hidden="true">→</span></button>
+  </header>
+
+  <main>
+    <section class="hero" id="top" aria-labelledby="heroTitle">
+      <div class="hero-photo" role="img" aria-label="AI-generated editorial Old Fashioned cocktail with the Austin skyline at dusk"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-inner page-width">
+        <div class="hero-copy">
+          <p class="eyebrow eyebrow-light"><span class="eyebrow-rule"></span> AN EVENING AT THE PRYORS’</p>
+          <h1 id="heroTitle">Pryorities<span class="title-period">.</span></h1>
+          <p class="hero-tagline">Some things are more<br><em>important than others.</em></p>
+          <p class="hero-intro">A thoughtfully stocked bar. A few favorite pours. Plenty of reasons to stay for one more conversation.</p>
+          <div class="hero-actions">
+            <a class="button button-gold" href="#menu">Explore the menu <span aria-hidden="true">→</span></a>
+            <button class="button button-ghost" id="heroSurprise" type="button">Pick one for me <span aria-hidden="true">✦</span></button>
+          </div>
+        </div>
+      </div>
+      <div class="hero-footer page-width">
+        <span>PRIVATE COCKTAILS &nbsp;·&nbsp; AUSTIN, TEXAS</span>
+        <a href="#featured">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
+      </div>
+    </section>
+
+    <section class="featured-section" id="featured" aria-labelledby="featuredTitle">
+      <div class="page-width">
+        <div class="section-heading section-heading-split">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-rule"></span> 01 / A FEW PRYORITIES</p>
+            <h2 id="featuredTitle">Good company.<br><em>Great pours.</em></h2>
+          </div>
+          <p class="section-lead">Start with the cocktails that feel especially at home here. These are a few of our favorite reasons to bring out the good glassware.</p>
+        </div>
+        <div id="featuredGrid" class="featured-grid" aria-label="Featured house cocktails"></div>
+        <p class="image-disclosure">Cocktail photography is AI-generated, inspired by the atmosphere of a downtown Austin home bar.</p>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu" aria-labelledby="menuTitle">
+      <div class="page-width">
+        <div class="section-heading section-heading-split menu-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-rule"></span> 02 / THE COLLECTION</p>
+            <h2 id="menuTitle">Whatever your<br><em>pryorities.</em></h2>
+          </div>
+          <p class="section-lead">Something spirit-forward. Something bright. Something with an olive. There’s no wrong answer here—except maybe leaving thirsty.</p>
+        </div>
+
+        <div class="collection-controls">
+          <div class="collection-tabs" role="tablist" aria-label="Choose a menu section">
+            <button class="collection-tab is-active" id="tabEngagements" role="tab" aria-controls="menuList" aria-selected="true" data-collection="engagements" type="button">
+              <span class="tab-name">Pryor Engagements</span><span class="tab-count" id="engagementsCount">23</span>
+            </button>
+            <button class="collection-tab" id="tabIndiscretions" role="tab" aria-controls="menuList" aria-selected="false" data-collection="indiscretions" type="button">
+              <span class="tab-name">Pryor Indiscretions</span><span class="tab-count" id="indiscretionsCount">39</span>
+            </button>
+          </div>
+          <div class="collection-intro">
+            <p id="collectionDescription"><strong>Our engagements.</strong> The thoughtfully chosen house favorites—the ones that always deserve another invitation.</p>
+            <button class="favorites-toggle" id="favoritesToggle" type="button" aria-pressed="false"><span aria-hidden="true">♡</span> Saved drinks <span class="saved-count" id="savedCount">0</span></button>
+          </div>
+        </div>
+
+        <div class="search-and-filters">
+          <label class="search-box" for="drinkSearch">
+            <span class="search-icon" aria-hidden="true"></span>
+            <input id="drinkSearch" type="search" placeholder="Find your kind of cocktail..." autocomplete="off" spellcheck="false">
+            <span class="search-hint">SEARCH</span>
+          </label>
+          <div class="filters" id="spiritFilters" aria-label="Filter drinks by category"></div>
+        </div>
+
+        <div class="menu-list-topline"><span id="resultsLabel">23 COCKTAILS</span><span>SELECT A DRINK TO SEE THE RECIPE <span aria-hidden="true">→</span></span></div>
+        <div class="menu-grid" id="menuList" role="tabpanel" aria-labelledby="tabEngagements"></div>
+        <div class="empty-state" id="emptyState" hidden>
+          <span class="empty-ornament" aria-hidden="true">✦</span>
+          <h3>No matches in this round.</h3>
+          <p>Try another spirit, or clear the search. There’s plenty more behind the bar.</p>
+          <button type="button" id="clearFilters" class="button button-dark">Clear filters</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="house-note" aria-label="The house philosophy">
+      <div class="page-width house-note-inner">
+        <span class="note-flourish" aria-hidden="true">◆</span>
+        <p>“The drinks are carefully considered.<br><em>The company is the important part.</em>”</p>
+        <span class="note-attribution">— THE PRYOR HOUSE RULE</span>
+      </div>
+    </section>
+
+    <section class="setting-section" id="setting" aria-labelledby="settingTitle">
+      <div class="page-width">
+        <div class="section-heading section-heading-split setting-heading">
+          <div>
+            <p class="eyebrow eyebrow-light"><span class="eyebrow-rule"></span> 03 / THE SETTING</p>
+            <h2 id="settingTitle">A new view.<br><em>Same Pryorities.</em></h2>
+          </div>
+          <p class="section-lead">We’re imagining evenings above Austin—beautiful light, a little city buzz, and friends gathered around the bar. Two possible homes helped inspire this first edition.</p>
+        </div>
+        <div class="venue-grid">
+          <a class="venue-card" href="https://liveat6g.com/gallery/" target="_blank" rel="noopener noreferrer" aria-label="Visit the official gallery for Residences at 6G">
+            <img src="https://liveat6g.com/assets/images/cache/PhotoBy-OnwardGroup-13-20250406-6G-Penthouses-LPG-2711-c12db7d8def09c37ac9ebadc0b34731c.jpg" loading="lazy" alt="Living room overlooking downtown Austin at Residences at 6G" onerror="this.style.visibility='hidden'">
+            <span class="venue-overlay"></span>
+            <span class="venue-details"><small>AN INSPIRATION</small><strong>Residences at 6G</strong><span>Downtown elegance <b aria-hidden="true">→</b></span></span>
+          </a>
+          <a class="venue-card" href="https://700river.com/gallery/" target="_blank" rel="noopener noreferrer" aria-label="Visit the official gallery for 700 River">
+            <img src="https://700river.com/assets/images/cache/20250610_700-River5662_K2-5ab50f56ea85527b07d1dbb5b01d98f4.jpg" loading="lazy" alt="Gold-lit residential lounge at 700 River in downtown Austin" onerror="this.style.visibility='hidden'">
+            <span class="venue-overlay"></span>
+            <span class="venue-details"><small>AN INSPIRATION</small><strong>700 River</strong><span>Warm modern hospitality <b aria-hidden="true">→</b></span></span>
+          </a>
+        </div>
+        <p class="setting-credit">Residence photography shown from the official <a href="https://liveat6g.com/gallery/" target="_blank" rel="noopener noreferrer">6G</a> and <a href="https://700river.com/gallery/" target="_blank" rel="noopener noreferrer">700 River</a> galleries as design references. This private menu is not affiliated with either property.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-width footer-top">
+      <div><span class="footer-wordmark">Pryorities<span>.</span></span><p>Some things are more important than others.</p></div>
+      <div class="footer-right"><span>AUSTIN, TEXAS</span><a href="#top">BACK TO THE TOP ↑</a></div>
+    </div>
+    <div class="page-width footer-bottom"><span>A PRIVATE HOME BAR &nbsp;·&nbsp; BY INVITATION</span><span>PLEASE SIP RESPONSIBLY</span></div>
+  </footer>
+
+  <div class="recipe-modal" id="recipeModal" hidden>
+    <div class="recipe-backdrop" id="modalBackdrop"></div>
+    <div class="recipe-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+      <button class="close-modal" id="closeModal" type="button" aria-label="Close recipe">✕</button>
+      <div id="recipeDetails"></div>
+    </div>
+  </div>
+
+  <noscript><p class="no-script">Please enable JavaScript to explore the interactive cocktail menu.</p></noscript>
+  <script type="module" src="assets/app.js"></script>
+</body>
+</html>
